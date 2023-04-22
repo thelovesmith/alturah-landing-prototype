@@ -321,53 +321,39 @@ export default function Example() {
               <StaticImage
                 src="../images/alturahWordMark.png"
                 alt="Your image description"
-                // placeholder="blurred"
-                layout="fixed"
-                width={700}
-                height={150}
+                placeholder="blurred"
+                layout="fullWidth"
+                formats={["auto", "webp", "avif"]}
+                className="w-full max-w-[700px] mx-auto"
               />
 
               <p className="mt-6 text-lg leading-8 text-gray-300">Book One</p>
               <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 The Turaeon Report
               </h1>
-              {/* <div className="mt-10 flex items-center gap-x-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Get started
-                </a>
-                <a
-                  href="#"
-                  className="text-sm font-semibold leading-6 text-white"
-                >
-                  Live demo <span aria-hidden="true">→</span>
-                </a>
-              </div> */}
+              <div className="mt-8">
+                <iframe
+                  width="540"
+                  height="560"
+                  src="https:/41330a12.sibforms.com/serve/MUIEAIdWfrcrgITN4MGrlQN5w9wsxYVB_lDlq48DzdbTQmBRz4U330y1nuafKSec_Ob1JV2k9UfZUytcr_4WFMtA054DG48fbdoi4oh7Lb8YDr1L31NVs-l7fDO0dlWwaQcWB-iGM3gzHd3gmEkmGusLXw6z6oOJzhets1pEh6p8_yqN5Z_J368bFr4l-HA0FWZn-i5fmXbPPVGe"
+                  frameborder="0"
+                  allowfullscreen
+                  style={{
+                    display: "block",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    maxWidth: "100%",
+                  }}
+                ></iframe>
+              </div>
             </div>
-
-            {/* <iframe
-              width="540"
-              height="435"
-              src="https://41330a12.sibforms.com/serve/MUIEAIdWfrcrgITN4MGrlQN5w9wsxYVB_lDlq48DzdbTQmBRz4U330y1nuafKSec_Ob1JV2k9UfZUytcr_4WFMtA054DG48fbdoi4oh7Lb8YDr1L31NVs-l7fDO0dlWwaQcWB-iGM3gzHd3gmEkmGusLXw6z6oOJzhets1pEh6p8_yqN5Z_J368bFr4l-HA0FWZn-i5fmXbPPVGe"
-              frameborder="0"
-              scrolling="auto"
-              allowfullscreen
-              style={{
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                maxWidth: "100%",
-              }}
-            ></iframe> */}
 
             <div className="mx-auto mt-8 flex flex-col items-center sm:mt-16 md:mt-24 lg:flex-row lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
               <div className="max-w-3xl w-full flex-none sm:max-w-5xl lg:max-w-none">
                 <StaticImage
                   src="../images/paperBackMockUp.png"
                   alt="Image of Paper Back"
-                  // placeholder="blurred"
+                  placeholder="blurred"
                   layout="constrained"
                   aspectRatio={1}
                   className="w-full h-auto md:w-1/2 lg:w-[76rem] lg:ml-4 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
@@ -563,10 +549,10 @@ export default function Example() {
 
       <iframe
         width="540"
-        height="435"
-        src="https://41330a12.sibforms.com/serve/MUIEAIdWfrcrgITN4MGrlQN5w9wsxYVB_lDlq48DzdbTQmBRz4U330y1nuafKSec_Ob1JV2k9UfZUytcr_4WFMtA054DG48fbdoi4oh7Lb8YDr1L31NVs-l7fDO0dlWwaQcWB-iGM3gzHd3gmEkmGusLXw6z6oOJzhets1pEh6p8_yqN5Z_J368bFr4l-HA0FWZn-i5fmXbPPVGe"
+        height="560"
+        src="https:/41330a12.sibforms.com/serve/MUIEAIdWfrcrgITN4MGrlQN5w9wsxYVB_lDlq48DzdbTQmBRz4U330y1nuafKSec_Ob1JV2k9UfZUytcr_4WFMtA054DG48fbdoi4oh7Lb8YDr1L31NVs-l7fDO0dlWwaQcWB-iGM3gzHd3gmEkmGusLXw6z6oOJzhets1pEh6p8_yqN5Z_J368bFr4l-HA0FWZn-i5fmXbPPVGe"
         frameborder="0"
-        scrolling="auto"
+        // scrolling="auto"
         allowfullscreen
         style={{
           display: "block",
