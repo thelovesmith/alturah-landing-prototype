@@ -63,6 +63,7 @@
 // export default IndexPage
 
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 import {
   ArrowPathIcon,
@@ -172,19 +173,19 @@ const footerNavigation = {
     { name: "Terms", href: "#" },
   ],
   social: [
-    {
-      name: "Facebook",
-      href: "#",
-      icon: props => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-            clipRule="evenodd"
-          />
-        </svg>
-      ),
-    },
+    // {
+    //   name: "Facebook",
+    //   href: "#",
+    //   icon: props => (
+    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+    //       <path
+    //         fillRule="evenodd"
+    //         d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+    //         clipRule="evenodd"
+    //       />
+    //     </svg>
+    //   ),
+    // },
     {
       name: "Instagram",
       href: "https://www.instagram.com/alturahent/",
@@ -199,40 +200,71 @@ const footerNavigation = {
       ),
     },
     {
-      name: "Twitter",
-      href: "#",
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/alturah/",
       icon: props => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          <path d="M6.17 21.5H2.42v-14h3.75v14zM4.278 6.525c-1.2 0-2.168-.98-2.168-2.19C2.11 2.98 3.08 2 4.278 2c1.2 0 2.167.98 2.167 2.19 0 1.21-.967 2.334-2.167 2.334zm14.228 15h-3.752v-7.385c0-1.76-.627-2.955-2.208-2.955-1.205 0-1.92.813-2.235 1.602-0.115 0.278-.143 0.668-.143 1.057v8.68h-3.75s.048-14.052 0-14h3.75v1.983c.5-.76 1.392-1.853 3.392-1.853 2.48 0 4.344 1.624 4.344 5.142v9.727z" />
         </svg>
       ),
     },
+
+    // {
+    //   name: "Twitter",
+    //   href: "#",
+    //   icon: props => (
+    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+    //       <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+    //     </svg>
+    //   ),
+    // },
     {
-      name: "GitHub",
-      href: "#",
+      name: "Patreon",
+      href: "https://www.patreon.com/alturah/creators",
       icon: props => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-            clipRule="evenodd"
-          />
+          <path d="M16.667 1.333c-3.7 0-6.667 2.966-6.667 6.667 0 3.7 2.967 6.667 6.667 6.667 3.7 0 6.666-2.967 6.666-6.667 0-3.701-2.966-6.667-6.666-6.667zM4.333 24V1.333H1.333V24h3z" />
         </svg>
       ),
     },
+
+    // {
+    //   name: "GitHub",
+    //   href: "#",
+    //   icon: props => (
+    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+    //       <path
+    //         fillRule="evenodd"
+    //         d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+    //         clipRule="evenodd"
+    //       />
+    //     </svg>
+    //   ),
+    // },
+
     {
-      name: "YouTube",
-      href: "#",
+      name: "TikTok",
+      href: "https://www.tiktok.com/@alturahentertainment",
       icon: props => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-            clipRule="evenodd"
-          />
+          <path d="M17.316 6.246c-.545 0-1.057.084-1.524.242l-3.553-3.553a1.909 1.909 0 00-2.699 0 1.926 1.926 0 000 2.699l3.553 3.553a4.246 4.246 0 11-.167 6.829 4.24 4.24 0 013.348-4.83v4.193c0 1.014.816 1.83 1.83 1.83s1.83-.816 1.83-1.83V7.076c0-1.014-.816-1.83-1.83-1.83z" />
         </svg>
       ),
     },
+
+    // {
+    //   name: "YouTube",
+    //   href: "#",
+    //   icon: props => (
+    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+    //       <path
+    //         fillRule="evenodd"
+    //         d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+    //         clipRule="evenodd"
+    //       />
+    //     </svg>
+    //   ),
+    // },
   ],
 }
 
@@ -241,6 +273,7 @@ export default function Example() {
     <div className="bg-gray-900">
       <main>
         {/* Hero section */}
+
         <div className="relative isolate overflow-hidden">
           <svg
             className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -285,34 +318,20 @@ export default function Example() {
           </div>
           <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-40 lg:flex lg:px-8 lg:pt-40">
             <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-              <img
-                className="h-11"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
+              <StaticImage
+                src="../images/alturahWordMark.png"
+                alt="Your image description"
+                // placeholder="blurred"
+                layout="fixed"
+                width={700}
+                height={150}
               />
-              <div className="mt-24 sm:mt-32 lg:mt-16">
-                <a href="#" className="inline-flex space-x-6">
-                  <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
-                    Latest updates
-                  </span>
-                  <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
-                    <span>Just shipped v1.0</span>
-                    <ChevronRightIcon
-                      className="h-5 w-5 text-gray-500"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </a>
-              </div>
+
+              <p className="mt-6 text-lg leading-8 text-gray-300">Book One</p>
               <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Deploy to the cloud with confidence
+                The Turaeon Report
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
-              </p>
-              <div className="mt-10 flex items-center gap-x-6">
+              {/* <div className="mt-10 flex items-center gap-x-6">
                 <a
                   href="#"
                   className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
@@ -325,107 +344,72 @@ export default function Example() {
                 >
                   Live demo <span aria-hidden="true">→</span>
                 </a>
-              </div>
+              </div> */}
             </div>
-            <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-              <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-                <img
-                  src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-                  alt="App screenshot"
-                  width={2432}
-                  height={1442}
-                  className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+
+            {/* <iframe
+              width="540"
+              height="435"
+              src="https://41330a12.sibforms.com/serve/MUIEAIdWfrcrgITN4MGrlQN5w9wsxYVB_lDlq48DzdbTQmBRz4U330y1nuafKSec_Ob1JV2k9UfZUytcr_4WFMtA054DG48fbdoi4oh7Lb8YDr1L31NVs-l7fDO0dlWwaQcWB-iGM3gzHd3gmEkmGusLXw6z6oOJzhets1pEh6p8_yqN5Z_J368bFr4l-HA0FWZn-i5fmXbPPVGe"
+              frameborder="0"
+              scrolling="auto"
+              allowfullscreen
+              style={{
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+                maxWidth: "100%",
+              }}
+            ></iframe> */}
+
+            <div className="mx-auto mt-8 flex flex-col items-center sm:mt-16 md:mt-24 lg:flex-row lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+              <div className="max-w-3xl w-full flex-none sm:max-w-5xl lg:max-w-none">
+                <StaticImage
+                  src="../images/paperBackMockUp.png"
+                  alt="Image of Paper Back"
+                  // placeholder="blurred"
+                  layout="constrained"
+                  aspectRatio={1}
+                  className="w-full h-auto md:w-1/2 lg:w-[76rem] lg:ml-4 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Logo cloud */}
-        <div className="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
-          <h2 className="text-center text-lg font-semibold leading-8 text-white">
-            The world’s most innovative companies use our app
-          </h2>
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-            <img
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg"
-              alt="Transistor"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-white.svg"
-              alt="Reform"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg"
-              alt="Tuple"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-white.svg"
-              alt="SavvyCal"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-white.svg"
-              alt="Statamic"
-              width={158}
-              height={48}
-            />
-          </div>
-        </div>
-
         {/* Feature section */}
+
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-indigo-400">
-              Deploy faster
-            </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Everything you need to deploy your app
+              D.L. Hines’ new series is a saga of epic fantasy, urban crime,
+              melodrama, and more. One of heroism, adventure, political
+              intrigue, and galactic war!
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
+              Coming out in 2023!
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {primaryFeatures.map(feature => (
-                <div key={feature.name} className="flex flex-col">
-                  <dt className="text-base font-semibold leading-7 text-white">
-                    <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500">
-                      <feature.icon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    {feature.name}
-                  </dt>
-                  <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                    <p className="flex-auto">{feature.description}</p>
-                    <p className="mt-6">
-                      <a
-                        href={feature.href}
-                        className="text-sm font-semibold leading-6 text-indigo-400"
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
-                  </dd>
-                </div>
-              ))}
-            </dl>
+          <div className="mx-auto max-w-2xl text-center mt-8">
+            <div className="flex justify-center items-center">
+              <h2 className="text-2xl font-semibold text-white mr-4">
+                Become a Patreon
+              </h2>
+              {footerNavigation.social
+                .filter(item => item.name === "Patreon")
+                .map(item => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-400"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                ))}
+            </div>
           </div>
         </div>
 
@@ -433,34 +417,30 @@ export default function Example() {
         <div className="mt-32 sm:mt-56">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
-              <h2 className="text-base font-semibold leading-7 text-indigo-400">
-                Everything you need
-              </h2>
               <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                No server? No problem.
+                The Galaxy
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-300">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis.
+                An Immersive Universe
               </p>
             </div>
           </div>
           <div className="relative overflow-hidden pt-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <img
-                src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-                alt="App screenshot"
-                className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
-                width={2432}
-                height={1442}
+              <StaticImage
+                src="../images/galaxyTrans.png"
+                alt="Image of Paper Back"
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                className="w-full h-auto md:w-1/2 lg:w-[76rem] lg:ml-4 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
               />
               <div className="relative" aria-hidden="true">
                 <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-900 pt-[7%]" />
               </div>
             </div>
           </div>
-          <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+          {/* <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
             <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
               {secondaryFeatures.map(feature => (
                 <div key={feature.name} className="relative pl-9">
@@ -475,11 +455,11 @@ export default function Example() {
                 </div>
               ))}
             </dl>
-          </div>
+          </div> */}
         </div>
 
         {/* Stats */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
+        {/* <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
             <h2 className="text-base font-semibold leading-8 text-indigo-400">
               Our track record
@@ -506,11 +486,11 @@ export default function Example() {
               </div>
             ))}
           </dl>
-        </div>
+        </div> */}
 
         {/* CTA section */}
         <div className="relative isolate mt-32 px-6 py-32 sm:mt-56 sm:py-40 lg:px-8">
-          <svg
+          {/* <svg
             className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
             aria-hidden="true"
           >
@@ -538,7 +518,7 @@ export default function Example() {
               strokeWidth={0}
               fill="url(#1d4240dd-898f-445f-932d-e2872fd12de3)"
             />
-          </svg>
+          </svg> */}
           <div
             className="absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
             aria-hidden="true"
@@ -552,16 +532,18 @@ export default function Example() {
             />
           </div>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Boost your productivity.
-              <br />
-              Start using our app today.
+            <h2 className="text-3xl font-bold tracking-wide text-white sm:text-4xl leading-relaxed my-4">
+              The galaxy of Alturah consists of noble worlds, fringe planets,
+              interstellar gates, and the remnants of past civilizations.
+              Experience interplanetary conflict, a long-lost ancient history,
+              socioeconomic disparity, and capitalism on a galactic scale.
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+
+            {/* <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
               Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
               anim id veniam aliqua proident excepteur commodo do ea.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            </p> */}
+            {/* <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
@@ -574,14 +556,14 @@ export default function Example() {
               >
                 Learn more <span aria-hidden="true">→</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
 
       <iframe
         width="540"
-        height="305"
+        height="435"
         src="https://41330a12.sibforms.com/serve/MUIEAIdWfrcrgITN4MGrlQN5w9wsxYVB_lDlq48DzdbTQmBRz4U330y1nuafKSec_Ob1JV2k9UfZUytcr_4WFMtA054DG48fbdoi4oh7Lb8YDr1L31NVs-l7fDO0dlWwaQcWB-iGM3gzHd3gmEkmGusLXw6z6oOJzhets1pEh6p8_yqN5Z_J368bFr4l-HA0FWZn-i5fmXbPPVGe"
         frameborder="0"
         scrolling="auto"
@@ -606,6 +588,7 @@ export default function Example() {
                 <a
                   key={item.name}
                   href={item.href}
+                  target="_blank"
                   className="text-gray-500 hover:text-gray-400"
                 >
                   <span className="sr-only">{item.name}</span>
