@@ -173,19 +173,6 @@ const footerNavigation = {
     { name: "Terms", href: "#" },
   ],
   social: [
-    // {
-    //   name: "Facebook",
-    //   href: "#",
-    //   icon: props => (
-    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-    //       <path
-    //         fillRule="evenodd"
-    //         d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-    //         clipRule="evenodd"
-    //       />
-    //     </svg>
-    //   ),
-    // },
     {
       name: "Instagram",
       href: "https://www.instagram.com/alturahent/",
@@ -208,16 +195,15 @@ const footerNavigation = {
         </svg>
       ),
     },
-
-    // {
-    //   name: "Twitter",
-    //   href: "#",
-    //   icon: props => (
-    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-    //       <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-    //     </svg>
-    //   ),
-    // },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@alturahentertainment",
+      icon: props => (
+        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+          <path d="M17.316 6.246c-.545 0-1.057.084-1.524.242l-3.553-3.553a1.909 1.909 0 00-2.699 0 1.926 1.926 0 000 2.699l3.553 3.553a4.246 4.246 0 11-.167 6.829 4.24 4.24 0 013.348-4.83v4.193c0 1.014.816 1.83 1.83 1.83s1.83-.816 1.83-1.83V7.076c0-1.014-.816-1.83-1.83-1.83z" />
+        </svg>
+      ),
+    },
     {
       name: "Patreon",
       href: "https://www.patreon.com/alturah/creators",
@@ -227,7 +213,15 @@ const footerNavigation = {
         </svg>
       ),
     },
-
+    // {
+    //   name: "Twitter",
+    //   href: "#",
+    //   icon: props => (
+    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+    //       <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+    //     </svg>
+    //   ),
+    // },
     // {
     //   name: "GitHub",
     //   href: "#",
@@ -241,17 +235,6 @@ const footerNavigation = {
     //     </svg>
     //   ),
     // },
-
-    {
-      name: "TikTok",
-      href: "https://www.tiktok.com/@alturahentertainment",
-      icon: props => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path d="M17.316 6.246c-.545 0-1.057.084-1.524.242l-3.553-3.553a1.909 1.909 0 00-2.699 0 1.926 1.926 0 000 2.699l3.553 3.553a4.246 4.246 0 11-.167 6.829 4.24 4.24 0 013.348-4.83v4.193c0 1.014.816 1.83 1.83 1.83s1.83-.816 1.83-1.83V7.076c0-1.014-.816-1.83-1.83-1.83z" />
-        </svg>
-      ),
-    },
-
     // {
     //   name: "YouTube",
     //   href: "#",
@@ -260,6 +243,19 @@ const footerNavigation = {
     //       <path
     //         fillRule="evenodd"
     //         d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+    //         clipRule="evenodd"
+    //       />
+    //     </svg>
+    //   ),
+    // },
+    // {
+    //   name: "Facebook",
+    //   href: "#",
+    //   icon: props => (
+    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+    //       <path
+    //         fillRule="evenodd"
+    //         d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
     //         clipRule="evenodd"
     //       />
     //     </svg>
@@ -316,6 +312,7 @@ export default function Example() {
               }}
             />
           </div>
+
           <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-40 lg:flex lg:px-8 lg:pt-40">
             <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
               <StaticImage
@@ -327,8 +324,8 @@ export default function Example() {
                 className="w-full max-w-[700px] mx-auto"
               />
 
-              <p className="mt-6 text-lg leading-8 text-gray-300">Book One</p>
-              <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              <p className="mt-8 text-4xl leading-9 text-gray-300">Book One</p>
+              <h1 className="mt-8 text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 The Turaeon Report
               </h1>
               <div className="mt-8">
@@ -356,7 +353,7 @@ export default function Example() {
                   placeholder="blurred"
                   layout="constrained"
                   aspectRatio={1}
-                  className="w-full h-auto md:w-1/2 lg:w-[76rem] lg:ml-4 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                  className="w-full h-auto md:w-1/2 lg:w-[76rem] lg:ml-4"
                 />
               </div>
             </div>
@@ -376,7 +373,7 @@ export default function Example() {
               Coming out in 2023!
             </p>
           </div>
-          <div className="mx-auto max-w-2xl text-center mt-8">
+          {/* <div className="mx-auto max-w-2xl text-center mt-8">
             <div className="flex justify-center items-center">
               <h2 className="text-2xl font-semibold text-white mr-4">
                 Become a Patreon
@@ -391,6 +388,27 @@ export default function Example() {
                     rel="noopener noreferrer"
                     className="text-gray-500 hover:text-gray-400"
                   >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                ))}
+            </div>
+          </div> */}
+          <div className="mx-auto max-w-2xl text-center mt-8">
+            <div className="flex justify-center items-center">
+              {footerNavigation.social
+                .filter(item => item.name === "Patreon")
+                .map(item => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-400 flex items-center"
+                  >
+                    <h2 className="text-2xl font-semibold text-white mr-4">
+                      Become a Patreon
+                    </h2>
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
@@ -411,11 +429,27 @@ export default function Example() {
               </p>
             </div>
           </div>
+          {/* <div className="relative overflow-hidden pt-16">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <StaticImage
+                src="../images/galaxyTrans.png"
+                alt="Image of Galaxy"
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                className="w-full h-auto md:w-1/2 lg:w-[76rem] lg:ml-4 rounded-md shadow-2xl"
+              />
+              <div className="relative" aria-hidden="true">
+                <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-900 pt-[7%]" />
+              </div>
+            </div>
+          </div> */}
+
           <div className="relative overflow-hidden pt-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <StaticImage
                 src="../images/galaxyTrans.png"
-                alt="Image of Paper Back"
+                alt="Image of Galaxy"
                 placeholder="blurred"
                 layout="constrained"
                 aspectRatio={1}
@@ -426,85 +460,10 @@ export default function Example() {
               </div>
             </div>
           </div>
-          {/* <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-            <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-              {secondaryFeatures.map(feature => (
-                <div key={feature.name} className="relative pl-9">
-                  <dt className="inline font-semibold text-white">
-                    <feature.icon
-                      className="absolute left-1 top-1 h-5 w-5 text-indigo-500"
-                      aria-hidden="true"
-                    />
-                    {feature.name}
-                  </dt>{" "}
-                  <dd className="inline">{feature.description}</dd>
-                </div>
-              ))}
-            </dl>
-          </div> */}
         </div>
 
-        {/* Stats */}
-        {/* <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-            <h2 className="text-base font-semibold leading-8 text-indigo-400">
-              Our track record
-            </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Trusted by thousands of developers&nbsp;worldwide
-            </p>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
-            </p>
-          </div>
-          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            {stats.map(stat => (
-              <div
-                key={stat.id}
-                className="flex flex-col gap-y-3 border-l border-white/10 pl-6"
-              >
-                <dt className="text-sm leading-6">{stat.name}</dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div> */}
-
-        {/* CTA section */}
+        {/* Quote */}
         <div className="relative isolate mt-32 px-6 py-32 sm:mt-56 sm:py-40 lg:px-8">
-          {/* <svg
-            className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="1d4240dd-898f-445f-932d-e2872fd12de3"
-                width={200}
-                height={200}
-                x="50%"
-                y={0}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={0} className="overflow-visible fill-gray-800/20">
-              <path
-                d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-              fill="url(#1d4240dd-898f-445f-932d-e2872fd12de3)"
-            />
-          </svg> */}
           <div
             className="absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
             aria-hidden="true"
@@ -524,25 +483,6 @@ export default function Example() {
               Experience interplanetary conflict, a long-lost ancient history,
               socioeconomic disparity, and capitalism on a galactic scale.
             </h2>
-
-            {/* <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-              Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
-              anim id veniam aliqua proident excepteur commodo do ea.
-            </p> */}
-            {/* <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Get started
-              </a>
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-white"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div> */}
           </div>
         </div>
       </main>
@@ -563,6 +503,7 @@ export default function Example() {
       ></iframe>
 
       {/* Footer */}
+
       <footer aria-labelledby="footer-heading" className="relative">
         <h2 id="footer-heading" className="sr-only">
           Footer
@@ -583,7 +524,14 @@ export default function Example() {
               ))}
             </div>
             <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-              &copy; 2020 Your Company, Inc. All rights reserved.
+              &copy; 2023, All Rights Reserved.{" "}
+              <a
+                href="https://www.linkedin.com/company/alturah/"
+                target="_blank"
+                className="text-gray-400 hover:text-gray-300 underline"
+              >
+                Alturah Entertainment LLC
+              </a>
             </p>
           </div>
         </div>
